@@ -729,10 +729,10 @@
       </div>
       <!-- ================= STEP 3: MEMORY SCRAPBOOK GALLERY ================= -->
       <div
-        class="w-full h-full flex flex-col justify-between items-center hidden opacity-0 transition-all duration-700 py-2 sm:py-3 px-2 overflow-y-auto custom-scroll"
+        class="w-full h-full flex flex-col justify-start items-center hidden opacity-0 transition-all duration-700 py-2 sm:py-3 px-2 overflow-y-auto custom-scroll"
         id="step-memory-gallery">
         <!-- Gallery Header -->
-        <div class="text-center">
+        <div class="text-center shrink-0" id="step-memory-header">
           <div class="flex items-center justify-center gap-2 sm:gap-3">
             <span class="text-rose-600 text-xl sm:text-2xl">📸</span>
             <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold text-rose-900 font-script tracking-wide">
@@ -800,7 +800,7 @@
           </div>
         </div>
         <!-- Navigation Buttons -->
-        <div class="flex items-center justify-center gap-3 sm:gap-4 z-20 pb-1">
+        <div class="flex items-center justify-center gap-3 sm:gap-4 z-20 pb-1 mt-auto shrink-0">
           <button
             class="px-4 sm:px-5 py-2 bg-stone-200 hover:bg-stone-300 text-stone-800 rounded-full font-bold text-xs sm:text-sm shadow transition"
             onclick="goToBirthdayCakeStep()">
@@ -816,10 +816,10 @@
       </div>
       <!-- ================= STEP 4: CHOOSE YOUR GIFTS ================= -->
       <div
-        class="w-full h-full flex flex-col justify-between items-center hidden opacity-0 transition-all duration-700 py-2 sm:py-3 px-2 overflow-y-auto custom-scroll"
+        class="w-full h-full flex flex-col justify-start items-center hidden opacity-0 transition-all duration-700 py-2 sm:py-3 px-2 overflow-y-auto custom-scroll"
         id="step-gifts">
         <!-- Title Header -->
-        <div class="text-center">
+        <div class="text-center shrink-0" id="step-gifts-header">
           <div class="flex items-center justify-center gap-2 sm:gap-3">
             <span class="text-rose-600 text-xl sm:text-2xl">♡</span>
             <h1 class="text-2xl sm:text-4xl md:text-5xl font-bold text-rose-900 font-script tracking-wide">
@@ -884,7 +884,7 @@
           </div>
         </div>
         <!-- Navigation Buttons -->
-        <div class="flex gap-4 pb-1">
+        <div class="flex gap-4 pb-1 mt-auto shrink-0">
           <button
             class="px-5 sm:px-6 py-2 bg-stone-200 hover:bg-stone-300 text-stone-800 rounded-full font-bold text-xs sm:text-sm shadow transition"
             onclick="goToMemoryStep()">
@@ -1005,7 +1005,7 @@
     class="fixed inset-0 bg-stone-950/75 backdrop-blur-md z-50 flex items-center justify-center p-3 sm:p-5 hidden opacity-0 transition-opacity duration-300"
     id="modal-music">
     <div
-      class="relative w-full max-w-xl bg-[#FFFDF9] rounded-2xl shadow-2xl border-2 sm:border-4 border-rose-300 p-4 sm:p-6 flex flex-col items-center max-h-[92vh] overflow-y-auto custom-scroll">
+      class="relative w-full max-w-xl sm:max-w-2xl bg-[#FFFDF9] rounded-2xl shadow-2xl border-2 sm:border-4 border-rose-300 p-4 sm:p-6 flex flex-col items-center max-h-[92vh] overflow-y-auto custom-scroll">
       <button
         class="absolute top-3 right-3 sm:top-4 sm:right-4 w-8 h-8 sm:w-9 sm:h-9 bg-rose-100 hover:bg-rose-200 text-rose-900 rounded-full font-bold flex items-center justify-center text-base sm:text-lg transition"
         onclick="closeModals()">
@@ -1015,12 +1015,12 @@
         <h2 class="text-2xl sm:text-4xl font-bold text-rose-900 font-script">Good Music, Better Days ♪</h2>
         <p class="text-stone-600 font-hand text-xs sm:text-sm">Every melody reminds me of your smile and hugs</p>
       </div>
-      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-5 w-full">
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-6 w-full">
         <!-- Spinning Vinyl Player -->
         <div
-          class="relative w-32 h-32 sm:w-40 sm:h-40 bg-rose-900 rounded-2xl p-2 sm:p-2.5 shadow-xl border border-rose-950 flex items-center justify-center flex-shrink-0">
+          class="relative w-32 h-32 sm:w-40 sm:h-40 md:w-44 md:h-44 bg-rose-900 rounded-2xl p-2 sm:p-2.5 shadow-xl border border-rose-950 flex items-center justify-center flex-shrink-0">
           <div
-            class="w-24 h-24 sm:w-32 sm:h-32 rounded-full bg-stone-900 border-4 border-stone-800 shadow-inner flex items-center justify-center record-spin"
+            class="w-24 h-24 sm:w-32 sm:h-32 md:w-36 md:h-36 rounded-full bg-stone-900 border-4 border-stone-800 shadow-inner flex items-center justify-center record-spin"
             id="vinyl-record" style="animation-play-state: paused;">
             <div
               class="w-9 h-9 sm:w-12 sm:h-12 rounded-full bg-rose-100 border-2 border-stone-700 flex items-center justify-center">
@@ -1034,12 +1034,12 @@
         </div>
         <!-- Couple Photo Card -->
         <div
-          class="bg-white p-2 pb-4 sm:pb-5 rounded-lg shadow-lg border border-stone-200 transform rotate-2 w-36 sm:w-44 flex-shrink-0">
-          <div class="w-full h-32 sm:h-40 overflow-hidden rounded bg-stone-100">
+          class="bg-white p-2.5 sm:p-3 pb-5 sm:pb-6 rounded-xl shadow-xl border border-stone-200 transform rotate-2 w-48 sm:w-56 md:w-64 flex-shrink-0 hover:rotate-0 hover:scale-105 transition-all duration-300">
+          <div class="w-full h-44 sm:h-56 md:h-64 overflow-hidden rounded-lg bg-stone-100 shadow-inner">
             <img class="w-full h-full object-cover"
               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAcQERhuXBbk7N1kbEGsiNTne0kDGYFkxnkzV_WwMWKnVzIEdQjVeJO2FMz15DB3FI837DxSnHaZe6IrdWbNg7Ub7x5OCxTn7zf6JOMIqaRs0copZa6IfHOPPbsh2F4yX_H-2jVAJtdpPeRoWCOXjQewDuGw7g88eMBsMgIQJe79WeP3xSfTcuoMxa8nagi9UAIHxCp3lMbF0jmS45USIPL12XTd09uTDG7CvdS-Q6nJ5VBZIIAeDLxT9Kq-JJpAkGyGFs" />
           </div>
-          <div class="text-center font-hand text-rose-900 text-[11px] sm:text-xs font-bold mt-1.5">
+          <div class="text-center font-hand text-rose-900 text-xs sm:text-sm font-bold mt-2">
             I'm Still Here With You ♡
           </div>
         </div>
@@ -1591,7 +1591,71 @@
       }
     }
 
-    // ================= ROBUST SCREEN TRANSITIONS (FIXES MEMORY & GIFT OVERLAP) =================
+    // ================= ROBUST SCREEN TRANSITIONS (FIXES SCROLL & OVERLAP) =================
+    function resetAllScrolls(targetId) {
+      // 1. Remove focus so mobile/desktop browsers don't retain scroll position at the clicked button
+      if (document.activeElement && typeof document.activeElement.blur === 'function') {
+        document.activeElement.blur();
+      }
+
+      // 2. Reset window and main document body scroll
+      window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+      if (document.documentElement) document.documentElement.scrollTop = 0;
+      if (document.body) document.body.scrollTop = 0;
+
+      // 3. Reset main scrapbook card container & inner paper
+      const scrapbook = document.getElementById('main-scrapbook');
+      if (scrapbook) {
+        scrapbook.scrollTop = 0;
+        scrapbook.scrollLeft = 0;
+      }
+      const gridPaper = document.querySelector('.grid-paper');
+      if (gridPaper) {
+        gridPaper.scrollTop = 0;
+        gridPaper.scrollLeft = 0;
+      }
+
+      // 4. Reset all step wrappers
+      const allStepIds = [
+        'step-passcode',
+        'step-interactive-bow',
+        'step-birthday-cake',
+        'step-memory-gallery',
+        'step-gifts'
+      ];
+      allStepIds.forEach(id => {
+        const el = document.getElementById(id);
+        if (el) {
+          el.scrollTop = 0;
+          el.scrollLeft = 0;
+        }
+      });
+
+      // 5. Reset any other scrollable containers
+      document.querySelectorAll('.overflow-y-auto, .custom-scroll').forEach(el => {
+        el.scrollTop = 0;
+      });
+
+      // 6. Ensure target header or target element is firmly scrolled into view from the top
+      if (targetId) {
+        const target = document.getElementById(targetId);
+        if (target) {
+          target.scrollTop = 0;
+        }
+        if (targetId === 'step-gifts') {
+          const header = document.getElementById('step-gifts-header');
+          if (header && typeof header.scrollIntoView === 'function') {
+            header.scrollIntoView({ behavior: 'instant', block: 'start' });
+          }
+        } else if (targetId === 'step-memory-gallery') {
+          const header = document.getElementById('step-memory-header');
+          if (header && typeof header.scrollIntoView === 'function') {
+            header.scrollIntoView({ behavior: 'instant', block: 'start' });
+          }
+        }
+      }
+    }
+
     function showScreen(targetId) {
       const allScreens = [
         'step-passcode',
@@ -1603,6 +1667,9 @@
 
       // Close any open modals
       closeModals();
+
+      // Immediately reset scroll upon button click
+      resetAllScrolls(targetId);
 
       // Immediately fade out all visible screens except target
       allScreens.forEach(id => {
@@ -1627,17 +1694,17 @@
           target.classList.remove('hidden');
 
           // Reset all scrollable containers to the top
-          const scrollContainers = [
-            document.querySelector('.grid-paper'),
-            document.getElementById('main-scrapbook'),
-            target
-          ];
-          scrollContainers.forEach(c => { if (c) c.scrollTop = 0; });
+          resetAllScrolls(targetId);
 
-          // Smoothly fade in target
+          // Smoothly fade in target and reinforce top position
           requestAnimationFrame(() => {
             target.classList.remove('opacity-0');
+            resetAllScrolls(targetId);
           });
+
+          // Extra safety timeouts for layout reflow & rendering passes
+          setTimeout(() => resetAllScrolls(targetId), 60);
+          setTimeout(() => resetAllScrolls(targetId), 180);
         }
       }, 320);
     }
@@ -1691,14 +1758,17 @@
 
     function goToBirthdayCakeStep() {
       if (autoShootTimer) clearTimeout(autoShootTimer);
+      resetAllScrolls('step-birthday-cake');
       showScreen('step-birthday-cake');
     }
 
     function goToMemoryStep() {
+      resetAllScrolls('step-memory-gallery');
       showScreen('step-memory-gallery');
     }
 
     function goToGiftStep() {
+      resetAllScrolls('step-gifts');
       showScreen('step-gifts');
     }
 
